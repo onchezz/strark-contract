@@ -7,7 +7,7 @@ version = "0.1.0"
 sierra = true
 casm = true
 
-
+#contract adress 0x076b4f19561a3c48f13aa3cb912ad92c0e702270466668ec9d77513ba6c5b0e2
 [dependencies]
 starknet = "2.1.0-rc2"
 snforge_std = { git = "https://github.com/foundry-rs/starknet-foundry.git", tag = "v0.4.1" }
@@ -15,7 +15,18 @@ snforge_std = { git = "https://github.com/foundry-rs/starknet-foundry.git", tag 
 [tool.snforge]
 # exit_first = true
 
-[tool.sncast]
-account = "counter"
+[tool.sncast.acc]
+account = "acc"
 network = "testnet"
-url = "http://127.0.0.1:5050/rpc"
+url = "http://0.0.0.1:5050"
+# starkli deploy --network=goerli-1
+
+# [tool.sncast]
+# account = "test2"
+# network = "testnet"
+# url = "http://127.0.0.1:5050/rpc"
+
+[tool.sncast]
+account = "onchez"
+network = "testnet"
+url = "http://0.0.0.0:5050"
