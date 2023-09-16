@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "stark-count",
-    "slug": "stark-count",
+    "slug": "stark-counter",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b43ff9c4-540d-4afb-80e8-9199667020b0"
+      }
+    },
+    "owner": "onchez"
   }
 }
