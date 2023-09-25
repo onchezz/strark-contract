@@ -4,6 +4,7 @@ trait ICounter<TContractState> {
     fn incr(ref self: TContractState);
     fn decr(ref self:TContractState);
     fn curr(self:@TContractState)-> u64;
+    fn incrby(ref self: TContractState,amount:u128);
 }
 #[starknet::contract]
 mod Counter{
@@ -24,6 +25,10 @@ impl Counter of super::ICounter<ContractState> {
     }
     fn curr(self:@ContractState)-> u64{
         self.counter.read()
+    }
+    fn incrby(ref self: ContractState,amount:u128){
+        let count = self.counter.read() +amount;
+        self.counter.write(count);
     }
 }
 }
